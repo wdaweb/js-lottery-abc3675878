@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function power(max) {
+      return Math.floor(Math.random() * max) + 1
+    }
+
+    function powernum() {
+      let one = "第一區號碼: "
+      let n = 0
+
+      for (i = 0; i < 6; i++) {
+        n = power(38)
+        console.log(n)
+        if (one.indexOf(n) > 0) {
+          i--
+          continue
+        } else {
+          one = one + n + ' '
+
+        }
+      }
+      return one + '第二組號碼: ' + power(8)
+    }
+    document.write(powernum())
+  </script>
+</body>
+
+</html>
